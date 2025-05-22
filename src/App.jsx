@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import "./App.css";
 import CircularProgress from "./CircularProgress";
+import search from './assets/search.png'
 
 function App() {
   const [resume, setResume] = useState(null);
@@ -66,7 +67,7 @@ function App() {
     <div className={darkMode ? "app dark" : "app"}>
       <nav className="navbar">
         <div className="nav-left">
-          <h1>SkillSync AI</h1>
+          <h1>SkillSync.AI</h1>
         </div>
         <div className="nav-right">
           <button className="help-btn" onClick={() => setShowHelp(!showHelp)}>
@@ -85,7 +86,7 @@ function App() {
      {showHelp && (
   <div className="modal-backdrop" onClick={() => setShowHelp(false)}>
     <div className="help-popup" onClick={(e) => e.stopPropagation()}>
-      <h3>How to use SkillSync AI</h3>
+      <h3>How to use SkillSync.AI</h3>
       <ul>
         <li>Upload your resume in PDF format.</li>
         <li>Paste the job description in the box next to it.</li>
@@ -117,7 +118,7 @@ function App() {
         </div>
       </form>
       <button className="match-btn" onClick={handleSubmit}>
-        {loading?"loading...":"Match"}
+        {loading?"scaning...":"Match"}
       </button>
 
       {result && (
