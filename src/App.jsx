@@ -24,7 +24,7 @@ function App() {
 
     try {
       setLoading(true);
-      const response = await axios.post("http://localhost:5000/match", formData);
+      const response = await axios.post("https://skillsync-ai-backend.onrender.com", formData);
       setLoading(false);
       setResult(response.data);
       setAnimatedScore(0); // Reset score for animation
